@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - using: docker
-        image: docker://mathcomp/mathcomp
-        entrypoint: check.sh
+      - run:
+          using: docker
+          image: docker://mathcomp/mathcomp
+          entrypoint: check.sh
