@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: chmod +x check.sh
       - uses: docker://mathcomp/mathcomp:latest-coq-8.10
         with:
-          entrypoint: /bin/ls
+          entrypoint: ./check.sh
