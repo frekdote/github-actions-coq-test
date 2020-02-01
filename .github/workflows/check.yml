@@ -8,4 +8,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: docker://mathcomp/mathcomp:latest-coq-8.10
         with:
-          entrypoint: ./check.sh
+          entrypoint: /bin/ls
