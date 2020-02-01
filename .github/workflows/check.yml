@@ -9,4 +9,4 @@ jobs:
       - run: chmod +x check.sh
       - uses: docker://mathcomp/mathcomp:latest-coq-8.10
         with:
-          args: ./check.sh
+          entrypoint: ./check.sh
