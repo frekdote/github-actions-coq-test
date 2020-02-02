@@ -8,5 +8,5 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           docker run --rm \
-            -u "$(id -u):$(id -g)" \
-            mathcomp/mathcomp:latest-coq-8.10
+            -w "/workspace" -v "${GITHUB_WORKSPACE}:/workspace" \
+            mathcomp/mathcomp:latest-coq-8.10 ./check.sh
