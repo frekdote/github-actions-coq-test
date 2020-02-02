@@ -6,8 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          docker run --rm \
-            -u "$(id -u):$(id -g)" \
-            -w "/workspace" -v "${GITHUB_WORKSPACE}:/workspace" \
-            mathcomp/mathcomp:1.10.0-coq-8.10
+      - run: echo "$(id -u)"
