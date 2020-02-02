@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          env
-          echo "----------"
-          ls -l /
+          docker run --rm \
+            -w "/workspace" -v "${GITHUB_WORKSPACE}:/workspace" \
+            mathcomp/mathcomp:latest-coq-8.10 ./check.sh
