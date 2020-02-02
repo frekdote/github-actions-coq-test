@@ -6,7 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          docker run --rm \
-            -w "${GITHUB_WORKSPACE}" -v "${GITHUB_WORKSPACE}:${GITHUB_WORKSPACE}" \
-            mathcomp/mathcomp:latest-coq-8.10 ./check.sh
+      - run: docker --version
