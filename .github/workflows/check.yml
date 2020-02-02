@@ -6,4 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: docker run --rm mathcomp/mathcomp:latest-coq-8.10
+      - run: |
+          docker run --rm \
+            -u "$(id -u):$(id -g)" \
+            mathcomp/mathcomp:latest-coq-8.10
