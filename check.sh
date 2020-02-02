@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+env
+echo "----------"
 ls -l
 echo "----------"
 ls -l /
