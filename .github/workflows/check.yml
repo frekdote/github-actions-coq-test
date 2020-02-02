@@ -10,4 +10,4 @@ jobs:
           docker run --rm \
             -u "$(id -u):$(id -g)" \
             -w "/workspace" -v "${GITHUB_WORKSPACE}:/workspace" \
-            mathcomp/mathcomp:latest-coq-8.10
+            mathcomp/mathcomp:1.10.0-coq-8.10
