@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 
-eval $(opam env)
-sudo chown -R coq:coq $GITHUB_WORKSPACE
+sudo chown -R coq:coq /workspace
 
 coq_makefile -f _CoqProject *.v -o Makefile
 make
