@@ -6,7 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build
-        uses: docker://mathcomp/mathcomp:latest-coq-8.10
-        with:
-          entrypoint: ./build.sh
+      - name: Build .v file
+        run: |
+          docker run --rm \
+            -w "/workspace" -v "${GITHUB_WORKSPACE}:/workspace" \
+            mathcomp/mathcomp:latest-coq-8.10 ./build.sh
