@@ -1,0 +1,12 @@
+name: Build
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        uses: docker://mathcomp/mathcomp:latest-coq-8.10
+        with:
+          entrypoint: ./build.sh
